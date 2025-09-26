@@ -26,7 +26,7 @@
 ![スマホ表示](LAVENÉ/screenshots/lavene-sp.png)
 
 モーダルウィンドウ  
-![Productsセクション](LAVENÉ/screenshots/lavene-products.png)
+![モーダルウィンドウ](LAVENÉ/screenshots/lavene-modal.png)
 
 ## 制作期間
 2025年9月（約3週間）
