@@ -19,7 +19,14 @@
 [公開URLはこちら](https://github.com/takemura-cloud/lavene-portfolio.git)
 
 ## スクリーンショット
-（ここにサイトのスクリーンショット画像を貼る）
+メインビジュアル  
+![トップページ](LAVENÉ/screenshots/lavene-main.png)
+
+スマホ表示  
+![スマホ表示](LAVENÉ/screenshots/lavene-sp.png)
+
+モーダルウィンドウ  
+![Productsセクション](LAVENÉ/screenshots/lavene-products.png)
 
 ## 制作期間
 2025年9月（約3週間）
