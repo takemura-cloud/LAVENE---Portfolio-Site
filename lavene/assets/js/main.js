@@ -78,37 +78,79 @@
             });
         });
 
-        // レビュースライド
-        document.addEventListener('DOMContentLoaded',() => {
-            const list =
-            document.querySelector('.reviews__list');
-            const items =
-            document.querySelectorAll('.review');
-            const prev =
-            document.querySelector('.prev');
-            const next =
-            document.querySelector('.next');
+     // レビュースライド
+        const list = document.querySelector('.reviews__list');
+        const items = document.querySelectorAll('.review');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        const indicators = document.querySelectorAll('.indicator li');
 
-            let index = 0;
+        let index = 0; // 現在のスライド番号
 
-            function updateSlide() {
-                list.style.transform = `translateX(-${index * 100}%)`;
-            }
+        // スライドを更新する関数
+        function updateSlide() {
+            const itemWidth = items[0].offsetWidth + 20; // 幅 + margin調整（pxは余白に合わせて調整してね）
+            list.style.transform = `translateX(-${index * itemWidth}px)`;
 
-            next.addEventListener('click',() => {
-                if(index < items.length - 1) {
-                    index++;
-                    updateSlide();
-                }
+            // インジケータの色更新
+            indicators.forEach((dot, i) => {
+            dot.style.backgroundColor = i === index ? '#2d2d2d' : '#ffffff';
             });
+        }
 
-            prev.addEventListener('click',() => {
-                if(index > 0) {
-                    index--;
-                    updateSlide();
-                }
+        // 次へ
+        next.addEventListener('click', () => {
+            index++;
+            if (index >= items.length) {
+                index = 0; //先頭に戻る
+            }
+            updateSlide();
+        });
+
+        // 前へ
+        prev.addEventListener('click', () => {
+            index--;
+            if (index < 0) {
+                index = items.length - 1;//最後に戻る
+            }
+            updateSlide();
+        });
+
+        // ドットクリック
+        indicators.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+            index = i;
+            updateSlide();
             });
         });
-    });
+
+        // 初期表示
+        updateSlide();
+        });
+
+    //ページトップボタン
+        const pageTopBtn = document.getElementById("pagetop");
+
+        //ボタンを最初は非表示
+        pageTopBtn.style.display = 'none';
+        
+        // スクロール位置に応じてボタンの表示/非表示を切り替える
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                pageTopBtn.style.display = 'block';
+            } else {
+                pageTopBtn.style.display = 'none';
+            }
+        });
+
+        // ページトップへスクロール
+        pageTopBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+            });
+        });
+
 
 }
