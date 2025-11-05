@@ -16,7 +16,7 @@
 - フェードインアニメーションを適用
 
 ## デモ
-[公開URLはこちら](https://github.com/takemura-cloud/LAVENE---Portfolio-Site/lavene/)
+[公開URLはこちら](https://takemura-cloud.github.io/LAVENE---Portfolio-Site/lavene/)
 
 ## スクリーンショット
 メインビジュアル  
