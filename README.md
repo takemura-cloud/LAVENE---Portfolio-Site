@@ -16,7 +16,7 @@
 - フェードインアニメーションを適用
 
 ## デモ
-[公開URLはこちら](https://github.com/takemura-cloud/lavene-portfolio.git)
+[公開URLはこちら](https://github.com/takemura-cloud/LAVENE---Portfolio-Site.git)
 
 ## スクリーンショット
 メインビジュアル  
@@ -26,7 +26,7 @@
 ![スマホ表示](LAVENÉ/screenshots/lavene-sp.png)
 
 モーダルウィンドウ  
-![Productsセクション](LAVENÉ/screenshots/lavene-products.png)
+![モーダルウィンドウ](LAVENÉ/screenshots/lavene-modal.png)
 
 ## 制作期間
 2025年9月（約3週間）
